@@ -1,0 +1,67 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "systems"
+    label: "Systems"
+    folder: "content/systems"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Amper", name: "amper", widget: "string"}
+      - {label: "Price", name: "price", widget: "string", required: false}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Specs", name: "specs", widget: "markdown"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+
+  - name: "components"
+    label: "Components"
+    folder: "content/components"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Category", name: "category", widget: "select", options: ["Panels", "Batteries", "Inverters", "Accessories"]}
+      - {label: "Price", name: "price", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Specs", name: "specs", widget: "markdown"}
+      - {label: "Warranty", name: "warranty", widget: "string"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Location", name: "location", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Images", name: "images", widget: "list", required: false, field: {label: "Image", name: "image", widget: "image"}}
+
+  - name: "settings"
+    label: "Settings"
+    files:
+      - label: "Global Settings"
+        name: "settings"
+        file: "content/settings.json"
+        fields:
+          - {label: "WhatsApp Number", name: "whatsapp_number", widget: "string"}
+          - {label: "Phone Number", name: "phone_number", widget: "string"}
+          - {label: "Address", name: "address", widget: "string"}
+          - {label: "Working Hours", name: "working_hours", widget: "string"}
+          - {label: "Hero Title", name: "hero_title", widget: "string"}
+          - {label: "Hero Subtitle", name: "hero_subtitle", widget: "string"}

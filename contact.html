@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا | Tornado Solar Systems</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                Tornado
+            </a>
+            <button class="mobile-menu-btn">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="systems.html">المنظومات</a></li>
+                <li><a href="components.html">المكونات</a></li>
+                <li><a href="shop.html">شراء مفرد</a></li>
+                <li><a href="projects.html">أعمالنا</a></li>
+                <li><a href="contact.html" class="active">تواصل معنا</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <h2 class="section-title">تواصل معنا</h2>
+
+    <div class="contact-container">
+        <div class="contact-info-cards">
+            <div class="info-card">
+                <div class="icon">💬</div>
+                <div>
+                    <h3>واتساب</h3>
+                    <p>تواصل معنا للحصول على استشارة مجانية</p>
+                    <a href="#" class="btn btn-whatsapp btn-whatsapp-general" style="margin-top:10px;">رسالة واتساب</a>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="icon">📞</div>
+                <div>
+                    <h3>اتصال مباشر</h3>
+                    <p>نحن متاحون للرد على اتصالاتكم</p>
+                    <a href="#" class="btn btn-outline btn-phone-general show-number" style="margin-top:10px; color:var(--primary); border-color:var(--primary);"></a>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="icon">📍</div>
+                <div>
+                    <h3>العنوان</h3>
+                    <p id="contact-address">بغداد، العراق</p>
+                    <p id="contact-hours">أوقات العمل: من 8 صباحاً إلى 6 مساءً</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form-container">
+            <h3 style="margin-bottom: 20px; color: var(--primary);">أرسل لنا رسالة</h3>
+            <form onsubmit="event.preventDefault(); alert('تم إرسال الرسالة بنجاح!');">
+                <div class="form-group">
+                    <label for="name">الاسم</label>
+                    <input type="text" id="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">رقم الهاتف</label>
+                    <input type="tel" id="phone" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">الرسالة</label>
+                    <textarea id="message" class="form-control" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary submit-btn">إرسال</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tornado Solar Systems. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                if (globalSettings) {
+                    document.getElementById('contact-address').textContent = globalSettings.address;
+                    document.getElementById('contact-hours').textContent = 'أوقات العمل: ' + globalSettings.working_hours;
+                }
+            }, 500);
+        });
+    </script>
+</body>
+</html>
