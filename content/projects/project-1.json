@@ -1,9 +1,8 @@
 {
-  "title": "منظومة 30 أمبير - فيلا الكرخ",
-  "location": "بغداد، الكرخ",
-  "description": "تركيب منظومة طاقة شمسية متكاملة 30 أمبير باستخدام ألواح Jinko وبطاريات ليثيوم 15 kWh لتشغيل أجهزة التكييف والإنارة بالكامل.",
+  "title": "منظومة 25 أمبير",
+  "location": "بغداد",
+  "description": "تركيب منظومة طاقة شمسية متكاملة  أمبير باستخدام ألواح Jinko وبطاريات ليثيوم 15 kWh لتشغيل أجهزة التكييف والإنارة بالكامل.",
   "images": [
-    "https://images.unsplash.com/photo-1592833159155-c62df1b65634?auto=format&fit=crop&q=80&w=600&h=400",
-    "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&q=80&w=600&h=400"
+    "/images/uploads/img-20260513-wa0050.jpg"
   ]
 }
